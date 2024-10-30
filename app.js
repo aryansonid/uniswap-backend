@@ -4,8 +4,6 @@ const dotenv = require("dotenv").config();
 const axios = require("axios");
 app.use(express.json());
 
-
-
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
@@ -22,7 +20,6 @@ app.get('/api/tokens', async (req, res) => {
         res.status(500).json({ error: 'Failed to fetch data' });
     }
 });
-
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
